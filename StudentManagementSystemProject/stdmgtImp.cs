@@ -67,7 +67,7 @@ namespace StudentManagementSystemProject
                 Console.WriteLine("Select Student class\n----------------------");
                 Console.WriteLine("1.First std(1st)\n2.Second std(2nd)\n3.Third std(3rd)\n4.Fourth std(4th)\n5.Fifth std(5th)");
                 Console.WriteLine("6.First std(6th)\n7.Second std(7th)");
-                cl = Convert.ToSByte(Console.ReadLine());
+                cl = Convert.ToInt32(Console.ReadLine());
 
                 switch (cl)
                 {
@@ -92,7 +92,7 @@ namespace StudentManagementSystemProject
         public void deleteStudent()
         {
             Console.WriteLine("Enter Student ID which want to Delete");
-            String id = Console.ReadLine() + "".ToUpper();
+            String id = Console.ReadLine().ToUpper();
 
             if (StudentData.ContainsKey(id))  //data exist
             {
@@ -110,7 +110,7 @@ namespace StudentManagementSystemProject
         public void SearchStudent()
         {
             Console.WriteLine("Enter Student ID which want to Search");
-            String id = Console.ReadLine() + "".ToUpper();
+            String id = Console.ReadLine().ToUpper();
 
             if (StudentData.ContainsKey(id))
             {
@@ -174,7 +174,7 @@ namespace StudentManagementSystemProject
         public void UpdateStudent()
         {
             Console.WriteLine("Enter Student ID whom you want to edit data");
-            String id = Console.ReadLine() + "".ToUpper();
+            String id = Console.ReadLine().ToUpper();
             if (!StudentData.ContainsKey(id))  //data exist
             {
                 Console.WriteLine("There is No Student with roll no {0}",id);
